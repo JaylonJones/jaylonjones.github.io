@@ -39,6 +39,7 @@ var level01 = function(window) {
                 { type: 'swords', x: 5900, y: groundY - 110 },
                 { type: 'swords', x: 6240, y: groundY },
                 { type: 'star', x: 6640, y: groundY - 170 },
+                 { type: 'star', x: 1340, y: groundY - 170 },
                 
             ]
         };
@@ -47,9 +48,9 @@ var level01 = function(window) {
         // Perform background anim
         function makeEnemy(x, y) {
           var enemy =  game.createGameItem('enemy',25);
-            var redSquare = draw.rect(50,50,'red');
-            redSquare.x = -25;
-            redSquare.y = -25;
+            var redSquare = draw.bitmap('img/monster.png');
+            redSquare.x = -50;
+            redSquare.y = -50;
             enemy.addChild(redSquare);
             enemy.x = x;
             enemy.y = y;
@@ -134,7 +135,7 @@ var level01 = function(window) {
             obstacleImage.y = -25;
             myObstacle.onPlayerCollision = function() {
                     myObstacle.fadeOut();
-                    game.increaseScore(100);
+                    game.increaseScore(5000);
                    
                 };
         }
