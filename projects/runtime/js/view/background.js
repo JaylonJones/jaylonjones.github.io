@@ -85,7 +85,7 @@ var background = function(window) {
 
 
             // TODO 5: Part 2 - Parallax
-            for (var i = 0; i < 9; i++) {
+            for (var i = 0; i <= 4; i++) {
 
                 buildings[i].x = buildings[i].x - '.3';
                 if (buildings[i].x < -200)
